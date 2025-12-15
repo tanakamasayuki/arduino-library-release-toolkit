@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+- (JA) tools/sync_release_assets.pyを追加し、親ディレクトリ配下のリポジトリでbump_version.pyとrelease.ymlの両方がある場合のみ同期するように対応
+- (EN) Added tools/sync_release_assets.py to sync bump_version.py and release.yml to sibling repos only when both files exist
 
 ## 0.0.4
 - (JA) bump_version.pyでCHANGELOG.mdを自動整形し、新バージョンのセクションを追加するように変更
