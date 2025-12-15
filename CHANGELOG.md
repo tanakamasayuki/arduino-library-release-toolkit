@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+
+## 0.0.4
 - (JA) bump_version.pyでCHANGELOG.mdを自動整形し、新バージョンのセクションを追加するように変更
 - (EN) Added changelog auto-update in bump_version.py to insert a new version section
 
