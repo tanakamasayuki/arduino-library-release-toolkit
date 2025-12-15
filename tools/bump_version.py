@@ -69,19 +69,26 @@ def update_sketch_files(
     library_name: str,
     new_version: str,
 ) -> None:
-    pattern = re.compile(
+    version_pattern = re.compile(
         rf"(^\s*-\s+{re.escape(library_name)}\s*\()\d+\.\d+\.\d+(\)\s*)",
+        flags=re.MULTILINE,
+    )
+    dir_pattern = re.compile(
+        r"^(?P<indent>\s*-\s+)dir\s*:\s*.+$",
         flags=re.MULTILINE,
     )
     for sketch in examples_root.rglob("sketch.yaml"):
         content = sketch.read_text(encoding="utf-8")
-        if not pattern.search(content):
-            continue
-        updated = pattern.sub(
+        updated = version_pattern.sub(
             lambda match: f"{match.group(1)}{new_version}{match.group(2)}",
             content,
         )
-        sketch.write_text(updated, encoding="utf-8")
+        updated = dir_pattern.sub(
+            lambda match: f"{match.group('indent')}{library_name} ({new_version})",
+            updated,
+        )
+        if updated != content:
+            sketch.write_text(updated, encoding="utf-8")
 
 
 
