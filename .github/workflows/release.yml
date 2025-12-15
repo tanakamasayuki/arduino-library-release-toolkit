@@ -45,6 +45,9 @@ jobs:
       - name: Stage files
         run: |
           git add library.properties
+          if [ -f CHANGELOG.md ]; then
+            git add CHANGELOG.md
+          fi
           # Leave sketch.yaml updates unstaged so the repo keeps using local dir references.
           # If bump_version.py created a version header, include it in the commit
           if [ -n "${{ steps.version.outputs.version_header }}" ] && [ -f "${{ steps.version.outputs.version_header }}" ]; then

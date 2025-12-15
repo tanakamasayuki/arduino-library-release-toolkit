@@ -92,6 +92,54 @@ def update_sketch_files(
 
 
 
+def update_changelog(changelog_path: pathlib.Path, new_version: str) -> None:
+    """Move Unreleased entries into a new version section."""
+    if not changelog_path.exists():
+        return
+
+    content = changelog_path.read_text(encoding="utf-8")
+    lines = content.splitlines()
+
+    try:
+        unreleased_idx = next(
+            idx for idx, line in enumerate(lines) if line.strip() == "## Unreleased"
+        )
+    except StopIteration:
+        return
+
+    def is_header(idx: int) -> bool:
+        return lines[idx].startswith("## ")
+
+    next_header_idx = next(
+        (idx for idx in range(unreleased_idx + 1, len(lines)) if is_header(idx)),
+        len(lines),
+    )
+
+    entry_start = unreleased_idx + 1
+    entry_end = next_header_idx
+    while entry_start < entry_end and not lines[entry_start].strip():
+        entry_start += 1
+    while entry_end > entry_start and not lines[entry_end - 1].strip():
+        entry_end -= 1
+
+    entries = lines[entry_start:entry_end]
+    if not entries:
+        return
+
+    new_lines: list[str] = []
+    new_lines.extend(lines[:unreleased_idx + 1])
+    new_lines.append("")  # blank line after Unreleased
+    new_lines.append(f"## {new_version}")
+    new_lines.extend(entries)
+
+    tail = lines[next_header_idx:]
+    if tail and tail[0].strip():
+        new_lines.append("")
+    new_lines.extend(tail)
+
+    changelog_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
+
+
 def _sanitize_for_macro(name: str) -> str:
     """Return an uppercase identifier-safe version of name for macro prefixes.
 
@@ -149,6 +197,7 @@ def main() -> None:
     if not args.preview:
         library_name = load_library_name(props_path)
         update_file(props_path, next_version)
+        update_changelog(pathlib.Path("CHANGELOG.md"), next_version)
         examples_root = pathlib.Path("examples")
         if examples_root.exists():
             update_sketch_files(examples_root, library_name, next_version)
