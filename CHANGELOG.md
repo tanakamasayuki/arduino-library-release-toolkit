@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+- (EN) Release workflow now pushes to the repository default branch (main/master/etc.) and docs reflect the change
+- (JA) リリースワークフローをリポジトリのデフォルトブランチ（mainやmasterなど）に対応させ、ドキュメントも更新
 
 ## 1.0.3
 - (EN) Ensure top-level `examples/sketch.yaml` is also committed on the release branch so it ships in the ZIP/tag

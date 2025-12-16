@@ -7,7 +7,7 @@ Arduinoライブラリのリリースを自動化するためのツールとワ�
 
 ## 特長
 - `tools/bump_version.py` が `library.properties` を更新し、`CHANGELOG.md` の `## Unreleased` 配下の項目を新しい `## <version>` セクションへ移動し、`examples/**/sketch.yaml` の `dir: ...` を `<ライブラリ名> (<version>)` に書き換え、`src/<library>_version.h` を生成します。
-- リリースワークフロー（`.github/workflows/release.yml`）は `main` でバージョンを上げてコミット・プッシュし、書き換え済み `sketch.yaml` をコミットした `release` ブランチを作り直して、そのブランチからタグとZIPを作成します。
+- リリースワークフロー（`.github/workflows/release.yml`）はリポジトリのデフォルトブランチでバージョンを上げてコミット・プッシュし、書き換え済み `sketch.yaml` をコミットした `release` ブランチを作り直して、そのブランチからタグとZIPを作成します。
 - `tools/sync_release_assets.py` は親ディレクトリを走査し、`tools/bump_version.py` と `.github/workflows/release.yml` の両方がある兄弟リポジトリに本リポジトリのファイルをコピーします。`--dry-run` と `--parent` に対応。
 
 ## 前提
@@ -27,7 +27,7 @@ Arduinoライブラリのリリースを自動化するためのツールとワ�
   ```
 
 ### リリースワークフローを実行する
-- GitHub Actions の `Release`（workflow_dispatch）を起動します。バージョンを上げて `main` にコミット/プッシュし、`release` ブランチを作り直して `sketch.yaml` の書き換えをコミットした状態でZIP・タグ・GitHubリリースを作成します。
+- GitHub Actions の `Release`（workflow_dispatch）を起動します。バージョンを上げてデフォルトブランチにコミット/プッシュし、`release` ブランチを作り直して `sketch.yaml` の書き換えをコミットした状態でZIP・タグ・GitHubリリースを作成します。
 
 ### 兄弟リポジトリへツールを同期する
 - 対象確認のみ:
@@ -44,4 +44,4 @@ Arduinoライブラリのリリースを自動化するためのツールとワ�
   ```
 
 ## メモ
-- `sketch.yaml` はGit上では `main` で相対 `dir:` を維持し、ワークフローが `release` ブランチ上で `<ライブラリ名> (<version>)` に書き換えてコミットします。ローカルは `src/` を参照しつつ、タグ/リリースはリリース用の内容を指すようにしています。
+- `sketch.yaml` はGit上ではデフォルトブランチで相対 `dir:` を維持し、ワークフローが `release` ブランチ上で `<ライブラリ名> (<version>)` に書き換えてコミットします。ローカルは `src/` を参照しつつ、タグ/リリースはリリース用の内容を指すようにしています。
