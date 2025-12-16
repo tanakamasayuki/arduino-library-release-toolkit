@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+
+## 1.0.4
 - (EN) Release workflow now pushes to the repository default branch (main/master/etc.) and docs reflect the change
 - (JA) リリースワークフローをリポジトリのデフォルトブランチ（mainやmasterなど）に対応させ、ドキュメントも更新
 
