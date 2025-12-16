@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+
+## 1.0.3
 - (JA) `examples/sketch.yaml` もリリースブランチでコミットし、ZIP/タグに確実に含めるように対応
 - (EN) Ensure top-level `examples/sketch.yaml` is also committed on the release branch so it ships in the ZIP/tag
 
