@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+- (JA) リリースワークフローで`release`ブランチを作り直し、書き換え済みsketch.yamlをタグの内容に含めるように変更
+- (EN) Release workflow now rebuilds the `release` branch and tags it so rewritten sketch.yaml files are part of the tagged release contents
 
 ## 1.0.0
 - (JA) tools/sync_release_assets.pyを追加し、親ディレクトリ配下のリポジトリでbump_version.pyとrelease.ymlの両方がある場合のみ同期するように対応
