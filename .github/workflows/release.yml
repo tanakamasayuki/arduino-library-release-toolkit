@@ -69,7 +69,7 @@ jobs:
           VERSION: ${{ steps.version.outputs.version }}
         run: |
           git checkout -B "$RELEASE_BRANCH"
-          git ls-files 'examples/**/sketch.yaml' | xargs -r git add
+          git ls-files 'examples/sketch.yaml' 'examples/**/sketch.yaml' | sort -u | xargs -r git add
           if git diff --cached --quiet; then
             echo "No release-only changes to commit."
           else
