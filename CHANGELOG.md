@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+
+## 1.0.7
 - (EN) Updated GitHub Actions versions in the release workflow for Node.js 24 compatibility
 - (JA) Node.js 24 対応のため、リリースワークフロー内の GitHub Actions バージョンを更新
 
