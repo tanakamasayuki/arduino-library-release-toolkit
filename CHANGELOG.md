@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+- (EN) Replaced softprops/action-gh-release with GitHub CLI commands in the release workflow
+- (JA) リリースワークフローで softprops/action-gh-release をやめ、GitHub CLI コマンドに置き換え
 
 ## 1.0.7
 - (EN) Updated GitHub Actions versions in the release workflow for Node.js 24 compatibility

@@ -148,12 +148,22 @@ jobs:
 
       - name: Publish release
         if: steps.create_tag_and_push.outcome == 'success'
-        uses: softprops/action-gh-release@v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ steps.version.outputs.version }}
-          name: v${{ steps.version.outputs.version }}
-          body: ${{ steps.release_notes.outputs.body }}
-          files: |
-            ${{ steps.archive.outputs.archive }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: v${{ steps.version.outputs.version }}
+          ARCHIVE: ${{ steps.archive.outputs.archive }}
+          RELEASE_BODY: ${{ steps.release_notes.outputs.body }}
+          TARGET: ${{ steps.release_branch.outputs.branch }}
+        run: |
+          NOTES_FILE="$(mktemp)"
+          printf '%s\n' "$RELEASE_BODY" > "$NOTES_FILE"
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --title "$TAG" --notes-file "$NOTES_FILE"
+            gh release upload "$TAG" "$ARCHIVE" --clobber
+          else
+            gh release create "$TAG" "$ARCHIVE" \
+              --title "$TAG" \
+              --notes-file "$NOTES_FILE" \
+              --target "$TARGET"
+          fi
