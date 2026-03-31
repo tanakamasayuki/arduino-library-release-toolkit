@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+
+## 1.0.5
 - (EN) Release workflow now includes the matching CHANGELOG.md version section in the GitHub release body
 - (JA) リリースワークフローで GitHub Release の本文に、対応する CHANGELOG.md のバージョン節を含めるように変更
 
