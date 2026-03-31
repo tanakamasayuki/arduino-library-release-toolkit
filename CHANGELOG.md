@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+
+## 1.0.8
 - (EN) Replaced softprops/action-gh-release with GitHub CLI commands in the release workflow
 - (JA) リリースワークフローで softprops/action-gh-release をやめ、GitHub CLI コマンドに置き換え
 
