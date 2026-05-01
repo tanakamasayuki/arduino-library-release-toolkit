@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+- (EN) Exclude `tests/` from the release branch and release ZIP archive
+- (JA) `release`ブランチとリリースZIPから`tests/`を除外
 
 ## 1.0.8
 - (EN) Replaced softprops/action-gh-release with GitHub CLI commands in the release workflow
