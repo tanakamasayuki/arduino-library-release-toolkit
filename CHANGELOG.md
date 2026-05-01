@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+
+## 1.0.9
 - (EN) Exclude `tests/` from the release branch and release ZIP archive
 - (JA) `release`ブランチとリリースZIPから`tests/`を除外
 
