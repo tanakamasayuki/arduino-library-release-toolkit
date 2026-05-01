@@ -8,7 +8,7 @@ git clone https://github.com/tanakamasayuki/EspHelper
 git clone https://github.com/tanakamasayuki/EspHttpServer
 git clone https://github.com/tanakamasayuki/EspNowBus
 git clone https://github.com/tanakamasayuki/variants_collector
-
+git clone https://github.com/tanakamasayuki/ArduTest.git
 
 
 https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
