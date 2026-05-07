@@ -9,6 +9,7 @@ git clone https://github.com/tanakamasayuki/EspHttpServer
 git clone https://github.com/tanakamasayuki/EspNowBus
 git clone https://github.com/tanakamasayuki/variants_collector
 git clone https://github.com/tanakamasayuki/ArduTest.git
+git clone https://github.com/tanakamasayuki/EspUsbHost
 
 
 https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
@@ -18,7 +19,6 @@ https://github.com/tanakamasayuki/efont
 https://github.com/tanakamasayuki/ESP32LitePack
 https://github.com/tanakamasayuki/ESP32PsramLock
 https://github.com/tanakamasayuki/EspEasyUtils
-https://github.com/tanakamasayuki/EspUsbHost
 https://github.com/tanakamasayuki/I2C_AXP192
 https://github.com/tanakamasayuki/I2C_BM8563
 https://github.com/tanakamasayuki/I2C_MPU6886
