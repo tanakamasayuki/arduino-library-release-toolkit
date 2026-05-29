@@ -1,7 +1,3 @@
-// Smoke test sketch — verifies the PCMFlowG711 library compiles against
-// the chosen profile and that the test harness wiring works.
-// Once the codec implementation lands, this stays as a build-only check.
-
 void setup()
 {
     Serial.begin(115200);

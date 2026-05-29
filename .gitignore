@@ -3,6 +3,7 @@ __pycache__/
 output/
 .venv/
 .pytest*/
+.env
 
 # Generated bundle and helper downloads
 tools/cache/
