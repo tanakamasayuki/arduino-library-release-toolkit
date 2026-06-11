@@ -7,7 +7,6 @@ git clone https://github.com/tanakamasayuki/EmbedFS
 git clone https://github.com/tanakamasayuki/EspHelper
 git clone https://github.com/tanakamasayuki/EspHttpServer
 git clone https://github.com/tanakamasayuki/EspNowBus
-git clone https://github.com/tanakamasayuki/variants_collector
 git clone https://github.com/tanakamasayuki/ArduTest.git
 git clone https://github.com/tanakamasayuki/EspUsbHost.git
 git clone https://github.com/tanakamasayuki/PCMFlow.git
@@ -15,7 +14,8 @@ git clone https://github.com/tanakamasayuki/PCMFlowG711.git
 git clone https://github.com/tanakamasayuki/PCMFlowG722.git
 git clone https://github.com/tanakamasayuki/PCMFlowOpus.git
 git clone https://github.com/tanakamasayuki/PCMFlowUDP.git
-
+git clone https://github.com/tanakamasayuki/LGFXVirtualCanvas
+git clone https://github.com/tanakamasayuki/LGFXScreenBuilder
 
 https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
 https://github.com/tanakamasayuki/LinxESP32
