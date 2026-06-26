@@ -16,6 +16,8 @@ git clone https://github.com/tanakamasayuki/PCMFlowOpus.git
 git clone https://github.com/tanakamasayuki/PCMFlowUDP.git
 git clone https://github.com/tanakamasayuki/LGFXVirtualCanvas
 git clone https://github.com/tanakamasayuki/LGFXScreenBuilder
+git clone https://github.com/tanakamasayuki/EspUsbDevice
+git clone https://github.com/tanakamasayuki/PCMFlowDevice
 
 https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
 https://github.com/tanakamasayuki/LinxESP32
