@@ -19,6 +19,7 @@ git clone https://github.com/tanakamasayuki/LGFXScreenBuilder
 git clone https://github.com/tanakamasayuki/PCMFlowDevice
 git clone https://github.com/tanakamasayuki/ESP32IRPulseKit
 git clone https://github.com/tanakamasayuki/EspUsbDevice
+git clone https://github.com/tanakamasayuki/PCMFlowDevice
 
 https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
 https://github.com/tanakamasayuki/LinxESP32
