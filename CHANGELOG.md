@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+- (EN) Added a `pre_bump.py` hook and exposed/logged the old and target release versions for all release hooks
+- (JA) `pre_bump.py`フックを追加し、全リリースフック向けに旧バージョンとリリース予定バージョンの環境変数・ログ出力を追加
 
 ## 1.1.0
 - (EN) Added optional `pre_version_commit.py` and `pre_release_commit.py` hooks for project-specific release validation and file staging

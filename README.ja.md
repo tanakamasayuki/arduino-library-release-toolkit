@@ -35,9 +35,22 @@ Arduinoライブラリのリリースを自動化するためのツールとワ�
 
 ```text
 tools/release_hooks/
+  pre_bump.py
   pre_version_commit.py
   pre_release_commit.py
 ```
+
+#### `pre_bump.py`
+
+バージョン関連ファイルを変更する前に実行します。特に、バージョン更新時に書き換えられる`examples/**/sketch.yaml`を含め、変更前の開発状態に対して検証や保全処理を行うためのフックです。
+
+主な用途:
+
+- バージョン更新前のソースとサンプルを使ったビルドチェック
+- 変更前のファイルや生成物の保全
+- リリースを開始できる状態かどうかの検証
+
+この時点ではファイルをステージする共通処理はまだ始まっていません。検証に失敗した場合は非ゼロで終了し、バージョン更新を中止します。
 
 #### `pre_version_commit.py`
 
@@ -70,7 +83,8 @@ tools/release_hooks/
 - フックは任意で、存在するものだけを実行します。
 - フックが非ゼロで終了した場合は、コミットや公開を行わずリリースを中止します。
 - フックは `git add`、`git rm`、ファイル生成、検証を担当できますが、`git commit`、`git push`、タグ作成は共通ワークフローが担当します。
-- `RELEASE_VERSION`、`RELEASE_TAG`、`RELEASE_LEVEL`、`RELEASE_PHASE` などのリリース情報を環境変数でフックへ渡します。
+- `RELEASE_OLD_VERSION`、`RELEASE_VERSION`、`RELEASE_TAG`、`RELEASE_LEVEL`、`RELEASE_PHASE`を環境変数でフックへ渡します。`RELEASE_VERSION`は更新後のバージョンで、`pre_bump.py`でも予定バージョンとして参照できます。
+- ワークフローのログには、旧バージョンから新バージョンへの変更内容を出力します。
 - フックはプロジェクト固有ファイルであり、`tools/sync_release_assets.py` の同期対象には含めません。
 
 ### 兄弟リポジトリへツールを同期する

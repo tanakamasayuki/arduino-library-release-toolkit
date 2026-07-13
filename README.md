@@ -31,13 +31,26 @@ Tools and workflows to automate Arduino library releases: bump versions, rewrite
 
 ### Project-specific release hooks
 
-Each project may provide either of the following Python scripts. A missing hook is skipped, preserving the current release behavior.
+Each project may provide any of the following Python scripts. A missing hook is skipped, preserving the current release behavior.
 
 ```text
 tools/release_hooks/
+  pre_bump.py
   pre_version_commit.py
   pre_release_commit.py
 ```
+
+#### `pre_bump.py`
+
+Runs before any version-related files are changed. It validates or preserves the original development state, including `examples/**/sketch.yaml`, which is rewritten by the version bump.
+
+Typical uses:
+
+- Build verification using the source and examples before the version bump
+- Preserving files or generated artifacts before they are changed
+- Verifying that the repository is ready to begin a release
+
+The shared staging process has not started at this point. A non-zero exit status aborts the release before the version bump.
 
 #### `pre_version_commit.py`
 
@@ -70,7 +83,8 @@ The hook must run `git add` for files it adds or updates and `git rm` for tracke
 - Hooks are optional; only hooks that exist are invoked.
 - A non-zero exit status aborts the release before the commit or publication.
 - Hooks may generate or validate files and run `git add` or `git rm`; the shared workflow remains responsible for `git commit`, `git push`, tagging, and publication.
-- Release information such as `RELEASE_VERSION`, `RELEASE_TAG`, `RELEASE_LEVEL`, and `RELEASE_PHASE` is passed to hooks through environment variables.
+- `RELEASE_OLD_VERSION`, `RELEASE_VERSION`, `RELEASE_TAG`, `RELEASE_LEVEL`, and `RELEASE_PHASE` are passed to hooks through environment variables. `RELEASE_VERSION` is the target version and is available to `pre_bump.py` before files are changed.
+- The workflow log shows the transition from the old version to the new version.
 - Hook scripts are project-specific and are not copied by `tools/sync_release_assets.py`.
 
 ### Sync release assets to sibling repos
