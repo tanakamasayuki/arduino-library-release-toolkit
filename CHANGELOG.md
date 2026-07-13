@@ -1,6 +1,8 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+
+## 1.1.0
 - (EN) Added optional `pre_version_commit.py` and `pre_release_commit.py` hooks for project-specific release validation and file staging
 - (JA) プロジェクト固有のリリース検証やファイルのステージを行う、任意の`pre_version_commit.py`と`pre_release_commit.py`フックを追加
 
