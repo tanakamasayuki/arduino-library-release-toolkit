@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+## 1.1.2
 - (EN) Set up Arduino CLI in the release workflow so project-specific hooks can run Arduino build checks
 - (JA) プロジェクト固有フックでArduinoのビルドチェックを実行できるよう、リリースワークフローにArduino CLIのセットアップを追加
 
