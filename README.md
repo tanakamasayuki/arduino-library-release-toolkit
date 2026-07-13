@@ -31,8 +31,6 @@ Tools and workflows to automate Arduino library releases: bump versions, rewrite
 
 ### Project-specific release hooks
 
-> This section defines the release hook specification. The workflow integration that invokes these hooks has not been implemented yet.
-
 Each project may provide either of the following Python scripts. A missing hook is skipped, preserving the current release behavior.
 
 ```text
