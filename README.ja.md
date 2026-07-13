@@ -82,6 +82,7 @@ tools/release_hooks/
 
 - フックは任意で、存在するものだけを実行します。
 - フックが非ゼロで終了した場合は、コミットや公開を行わずリリースを中止します。
+- 共通ワークフローがArduino CLIをセットアップするため、各フックから`arduino-cli`を呼び出せます。ボードコアや追加ライブラリなど、プロジェクト固有の依存関係はフック側で準備します。
 - フックは `git add`、`git rm`、ファイル生成、検証を担当できますが、`git commit`、`git push`、タグ作成は共通ワークフローが担当します。
 - `RELEASE_OLD_VERSION`、`RELEASE_VERSION`、`RELEASE_TAG`、`RELEASE_LEVEL`、`RELEASE_PHASE`を環境変数でフックへ渡します。`RELEASE_VERSION`は更新後のバージョンで、`pre_bump.py`でも予定バージョンとして参照できます。
 - ワークフローのログには、旧バージョンから新バージョンへの変更内容を出力します。

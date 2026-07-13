@@ -82,6 +82,7 @@ The hook must run `git add` for files it adds or updates and `git rm` for tracke
 
 - Hooks are optional; only hooks that exist are invoked.
 - A non-zero exit status aborts the release before the commit or publication.
+- The shared workflow sets up Arduino CLI, so hooks can invoke `arduino-cli`. Hooks remain responsible for installing project-specific board cores, libraries, and other dependencies.
 - Hooks may generate or validate files and run `git add` or `git rm`; the shared workflow remains responsible for `git commit`, `git push`, tagging, and publication.
 - `RELEASE_OLD_VERSION`, `RELEASE_VERSION`, `RELEASE_TAG`, `RELEASE_LEVEL`, and `RELEASE_PHASE` are passed to hooks through environment variables. `RELEASE_VERSION` is the target version and is available to `pre_bump.py` before files are changed.
 - The workflow log shows the transition from the old version to the new version.

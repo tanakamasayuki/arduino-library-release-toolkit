@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- (EN) Set up Arduino CLI in the release workflow so project-specific hooks can run Arduino build checks
+- (JA) プロジェクト固有フックでArduinoのビルドチェックを実行できるよう、リリースワークフローにArduino CLIのセットアップを追加
+
 ## 1.1.1
 - (EN) Added a `pre_bump.py` hook and exposed/logged the old and target release versions for all release hooks
 - (JA) `pre_bump.py`フックを追加し、全リリースフック向けに旧バージョンとリリース予定バージョンの環境変数・ログ出力を追加
