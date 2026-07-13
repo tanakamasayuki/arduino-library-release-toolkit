@@ -1,3 +1,7 @@
+# This file is maintained in the shared release toolkit:
+# https://github.com/tanakamasayuki/arduino-library-release-toolkit
+# Do not edit it in individual projects. Make changes in the toolkit and sync them instead.
+
 name: Release
 
 on:
