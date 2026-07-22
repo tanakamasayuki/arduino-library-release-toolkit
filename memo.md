@@ -20,6 +20,10 @@ git clone https://github.com/tanakamasayuki/PCMFlowDevice
 git clone https://github.com/tanakamasayuki/ESP32IRPulseKit
 git clone https://github.com/tanakamasayuki/EspUsbDevice
 git clone https://github.com/tanakamasayuki/PCMFlowDevice
+git clone https://github.com/tanakamasayuki/ESP32KeyBridge
+git clone https://github.com/tanakamasayuki/EspBle
+git clone https://github.com/tanakamasayuki/EspBleBluedroid
+git clone https://github.com/tanakamasayuki/EspMidi
 
 https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
 https://github.com/tanakamasayuki/LinxESP32
