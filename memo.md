@@ -25,6 +25,7 @@ git clone https://github.com/tanakamasayuki/EspBle
 git clone https://github.com/tanakamasayuki/EspBleBluedroid
 git clone https://github.com/tanakamasayuki/EspMidi
 git clone https://github.com/tanakamasayuki/BarcodeKit
+git clone https://github.com/tanakamasayuki/PaperCanvas
 
 https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
 https://github.com/tanakamasayuki/LinxESP32
