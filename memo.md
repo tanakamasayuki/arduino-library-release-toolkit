@@ -28,14 +28,14 @@ git clone https://github.com/tanakamasayuki/BarcodeKit
 git clone https://github.com/tanakamasayuki/PaperCanvas
 git clone https://github.com/tanakamasayuki/PCMFlowBluetooth.git
 
-https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
-https://github.com/tanakamasayuki/LinxESP32
-https://github.com/tanakamasayuki/UlpDebug
-https://github.com/tanakamasayuki/efont
-https://github.com/tanakamasayuki/ESP32LitePack
-https://github.com/tanakamasayuki/ESP32PsramLock
-https://github.com/tanakamasayuki/EspEasyUtils
-https://github.com/tanakamasayuki/I2C_AXP192
-https://github.com/tanakamasayuki/I2C_BM8563
-https://github.com/tanakamasayuki/I2C_MPU6886
-https://github.com/tanakamasayuki/I2C_SLG
+# https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
+# https://github.com/tanakamasayuki/LinxESP32
+# https://github.com/tanakamasayuki/UlpDebug
+# https://github.com/tanakamasayuki/efont
+# https://github.com/tanakamasayuki/ESP32LitePack
+# https://github.com/tanakamasayuki/ESP32PsramLock
+# https://github.com/tanakamasayuki/EspEasyUtils
+# https://github.com/tanakamasayuki/I2C_AXP192
+# https://github.com/tanakamasayuki/I2C_BM8563
+# https://github.com/tanakamasayuki/I2C_MPU6886
+# https://github.com/tanakamasayuki/I2C_SLG
