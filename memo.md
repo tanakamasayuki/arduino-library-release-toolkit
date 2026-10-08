@@ -22,7 +22,6 @@ git clone https://github.com/tanakamasayuki/EspUsbDevice
 git clone https://github.com/tanakamasayuki/PCMFlowDevice
 git clone https://github.com/tanakamasayuki/ESP32KeyBridge
 git clone https://github.com/tanakamasayuki/EspBle
-git clone https://github.com/tanakamasayuki/EspBleBluedroid
 git clone https://github.com/tanakamasayuki/EspMidi
 git clone https://github.com/tanakamasayuki/BarcodeKit
 git clone https://github.com/tanakamasayuki/PaperCanvas
