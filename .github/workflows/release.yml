@@ -8,8 +8,13 @@ on:
   workflow_dispatch:
     inputs:
       version_level:
-        description: "Version component to bump when forcing a release (major, minor, patch)"
-        required: false
+        description: "Version component to bump when forcing a release"
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
         default: "patch"
 
 permissions:
