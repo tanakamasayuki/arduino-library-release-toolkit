@@ -1,6 +1,10 @@
 # Changelog / 変更履歴
 
 ## Unreleased
+- (EN) Made the `version_level` input of the release workflow a dropdown (`patch` / `minor` / `major`)
+- (JA) リリースワークフローの`version_level`入力をプルダウン選択（`patch` / `minor` / `major`）に変更
+- (EN) Updated `actions/checkout` and `actions/setup-python` to v7, and replaced `arduino/setup-arduino-cli` (still on Node.js 20) with the official Arduino CLI install script to remove the Node.js 20 deprecation warning
+- (JA) Node.js 20 の非推奨警告を解消するため、`actions/checkout`と`actions/setup-python`をv7に更新し、Node.js 20 のままの`arduino/setup-arduino-cli`を公式インストールスクリプトによるArduino CLIのインストールに置き換え
 
 ## 1.1.2
 - (EN) Set up Arduino CLI in the release workflow so project-specific hooks can run Arduino build checks
