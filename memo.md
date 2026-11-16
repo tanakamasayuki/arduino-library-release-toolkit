@@ -25,7 +25,12 @@ git clone https://github.com/tanakamasayuki/EspBle
 git clone https://github.com/tanakamasayuki/EspMidi
 git clone https://github.com/tanakamasayuki/BarcodeKit
 git clone https://github.com/tanakamasayuki/PaperCanvas
-git clone https://github.com/tanakamasayuki/PCMFlowBluetooth.git
+git clone https://github.com/tanakamasayuki/PCMFlowBluetooth
+git clone https://github.com/tanakamasayuki/TinyMQ
+git clone https://github.com/tanakamasayuki/TinyWG
+git clone https://github.com/tanakamasayuki/TinyGFX
+git clone https://github.com/tanakamasayuki/TinyM5Board
+git clone https://github.com/tanakamasayuki/EmbedBench
 
 # https://github.com/tanakamasayuki/Arduino_TensorFlowLite_ESP32
 # https://github.com/tanakamasayuki/LinxESP32
